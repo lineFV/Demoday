@@ -9,7 +9,7 @@
 
         body {
             margin: 0 auto;
-            background-color: #FFFFFF;
+            background-color: white);
             margin: 0;
             width: 100vw;
             height: 100vh;
@@ -18,18 +18,66 @@
         }
 
 
-        header {
-            width: 100vw;
-            height: 100px;
-            margin: 0;
-            background-color: lightskyblue;
-            display: flex;
-            position: fixed;
-            top: 0px;
-            z-index: 3;
-        }
+    header{
+        height: 70px;
+        width: 100%;
+        background-color: #02afff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 10px;
+        flex-direction: row;
+        z-index: 2;
+    }
 
+    header>a{
+        margin-left: 3vw;
+        text-decoration: none;
+        font-size: 25px;
+        color: lightgray;
+        font-family: sans-serif;
+        font-weight: bold;
+        z-index: 2;
+    }
 
+nav{
+    width: 70%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3vw;
+    position: relative;
+    z-index: 2;
+    background-color: #02afff;
+}
+
+a{
+    text-decoration: none; 
+}
+
+nav>a{
+    text-decoration: none;
+    color: lightgray;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 15pt;
+    height: 70px;
+    width: calc(100% / 6);
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: 1s;
+    z-index: 2;
+    background-color: #02afff;
+}
+
+.d1:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+}
         img {
             width: 50px;
             height: 50px;
@@ -132,17 +180,17 @@
             position: relative;
             display: flex;
             justify-content: center;
-            background: rgba(255,153,255,0.4);
+            background: rgba(255,255,255);
             font-size: 3em;
         }
 
         .azul {
-            background: rgba(173,216,230,0.4);
+            background: rgba(255,255,255);
             display: flex;
             justify-content: center;
-            background: #A9F5F2;
             font-size: 3em;
         }
+
         img {
             position:absolute;
             z-index:-1;
@@ -164,25 +212,49 @@
             font-weight: 100;
         }
     .parallax {
-        background-image: url(img/crianca.jpg);
+        background-image: url("img/crianca.jpg");
     background-attachment: fixed;
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
     height: 95vh;
     position: relative;
-    top:16vh;
+    top:0;
+    z-index: 2;
+    overflow: hidden;
+    }
+    .parallax2 {
+        background-image: url("img/eu/criancas2.png");
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top:0;
+    z-index: 2;
+    overflow: hidden;
+    }
+    .parallax3 {
+        background-image: url("img/paisclaras/Cute2.jpg");
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 95vh;
+    top:0;
     z-index: 2;
     overflow: hidden;
     }
         .quadradinhos{
             position: relative;
-            top: 10vh;
+            top: 0vh;
+            background: rgba(255,255,255,0.6);
         }
         .rotate {
         left: -23vw;
-        background: linear-gradient(0.55turn,#e66465, #87cefa, #87cefa);
-        width: 122vw;
+        background: linear-gradient(0.55turn,#e66465, #02afff,#02afff);
+        width: 132vw;
         height: 42vh;
         position: relative;
         top: -15vh;
@@ -213,26 +285,26 @@
         }
         @keyframes rotate{
             0%{
-                background: linear-gradient(0.505turn,#e66465, #87cefa,#87cefa);
+                background: linear-gradient(0.505turn,#e66465, #02afff,#02afff);
                 transform: rotate(180deg);
                 top: -15vh;
                 height: 105vh;
             }
             20%{
-                background: linear-gradient(0.51turn,#e66465, #87cefa, #87cefa);
+                background: linear-gradient(0.51turn,#e66465, #02afff,#02afff);
             }
             40%{
-                background: linear-gradient(0.52turn,#e66465, #87cefa, #87cefa);
+                background: linear-gradient(0.52turn,#e66465, #02afff,#02afff);
             }
             60%{
-                background: linear-gradient(0.53turn,#e66465, #87cefa, #87cefa);
+                background: linear-gradient(0.53turn,#e66465, #02afff,#02afff);
             }
             80%{
-                background: linear-gradient(0.54turn,#e66465, #87cefa, #87cefa);
+                background: linear-gradient(0.54turn,#e66465, #02afff,#02afff);
             }
             100%{
                 transform: rotate(169deg);
-                background: linear-gradient(0.55turn,#e66465, #87cefa, #87cefa);
+                background: linear-gradient(0.55turn,#e66465, #02afff,#02afff);
                 top:-16vh;
             }
             
@@ -243,6 +315,10 @@
                 width: 250px;
                 height: 37vh;
             }
+            .colab{
+                width: 15vw;
+                height: 15vw;
+            }
 
         }
         @media (min-width:800px){
@@ -250,20 +326,30 @@
             width: 173px;
             height: 27vh;
             }
-
+            .colab{
+                width: 7vw;
+                height: 7vw;
+            }
         }
-        @media (min-width:1000px){
+        @media (min-width:1px){
             .conteudo{
                 width: 232px;
                height: 35vh;
             }
-
         }
     </style>
 
 </head>
 <body>
-    <header>      </header>
+    <header>
+        <a href="">LOGO</a>
+        <nav>
+            <a class="a1 d1" href="index.html">HOME</a>
+            <a class="a2 d1" href="contato.html">CONTATO</a>
+            <a class="a3 d1" href="sobre.html">SOBRE</a>
+            <a class="a4 d1" href="voce.html">VOCE</a>
+        </nav>
+    </header>
     <!-- Primeira Linha-->
     <section class="parallax">
         <div class="rotate">
@@ -274,13 +360,14 @@
         </div>
     </section>
     <section class="texto">
-        <h1 class="contatos"> Profissionais que ajudaram suas crianças.</h1>
+        <h1 class="contatos"> Profissionais que ajudarão suas crianças.</h1>
         <p>O psicólogo infantil trabalha basicamente a partir do lúdico.</p>
         <p> Assim, a criança vai às sessões e brinca, com o terapeuta ou sozinha e, enquanto isso, suas questões são abordadas de forma indireta.</p>
         <p> Dessa forma, os conteúdos são mais facilmente acessados pelo psicólogo, pois a criança os expressa por meio do brincar.</p>
         <div class="colab"></div>
     </section>
     <section class='quadradinhos'>
+            <div class="parallax2">
     <div class="titulo">
         <h2> Psicólogos Formados</h2>
      
@@ -334,6 +421,7 @@
 
         </div>
     </div>
+          
 
     <!-- Segunda Linha-->
 
@@ -387,7 +475,15 @@
 
         </div>
     </div>
-
+                </div>
+                <section class="texto">
+                        <h1 class="contatos"> Profissionais que ajudarão suas crianças.</h1>
+                        <p>O psicólogo infantil trabalha basicamente a partir do lúdico.</p>
+                        <p> Assim, a criança vai às sessões e brinca, com o terapeuta ou sozinha e, enquanto isso, suas questões são abordadas de forma indireta.</p>
+                        <p> Dessa forma, os conteúdos são mais facilmente acessados pelo psicólogo, pois a criança os expressa por meio do brincar.</p>
+                        <div class="colab"></div>
+                    </section>
+                <div class="parallax3">
     <div class="titulo">
 
         <h2> Psicólogos Voluntários</h2>
@@ -440,6 +536,7 @@
             </div>
 
         </div>
+                </div>
     </div>
 
     <!-- Segunda Linha-->
